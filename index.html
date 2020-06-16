@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jogo de Dados</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+       body img {
+
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="inicial">
+        <form>
+            <p>Cadastro</p>
+            <input type="radio" name="player" id="jogador1Id" required> Jogador 1
+            <input type="radio" name="player" id="jogador2Id" required> Jogador 2
+            <br />
+            <br />
+            Nome: <input type="text" name="nome" id="nomeId" required>
+            <br />
+            <br />
+            Nick: <input type="text" name="nick" id="nickId" required>
+            <br />
+            <br />
+            Idade: <input type="number" name="idade" size="1" id="idadeId" required> <button type="submit" onclick="nickjogador()">Ok</button>
+        </form>
+    </div>
+
+    <div  id="dados">
+        
+        <div class="jogo">
+            <p>Jogo de dados</p>
+            
+            <p id="total">Total:</p>
+            <br />
+            <img src="face00.png" id="dadoBase1">
+            <input type="button" id="player1" value="Jogador 1">
+            <button onclick="mudar()" disabled>LET'S GO</button>
+            <button type="reset" onclick="refresh()">Reiniciar o Jogo</button>
+            <img src="face00.png" id="dadoBase2">
+            <input type="button" id="player2" value="Jogador 2">
+            
+        </div>
+    </div>
+    
+    <!--<script type="text/javascript" src="coletadeinformações.js"></script> -->
+    <script type="text/javascript" src="dado.js"></script>
+</body>
+</html>
