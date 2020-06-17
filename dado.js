@@ -6,22 +6,22 @@ function mudar(){
     switch (numero){
     
         case 1: 
-        document.getElementById('dadoBase1').src = "face1.png";
+        document.getElementById('dadoBase1').src = "images/face1.png";
             break;
         case 2:  
-        document.getElementById('dadoBase1').src = "face2.png";
+        document.getElementById('dadoBase1').src = "images/face2.png";
             break;
         case 3:  
-        document.getElementById('dadoBase1').src = "face3.png";
+        document.getElementById('dadoBase1').src = "images/face3.png";
             break;
         case 4:  
-        document.getElementById('dadoBase1').src = "face4.png";
+        document.getElementById('dadoBase1').src = "images/face4.png";
             break;
         case 5:  
-        document.getElementById('dadoBase1').src = "face5.png";
+        document.getElementById('dadoBase1').src = "images/face5.png";
             break;
         case 6:  
-        document.getElementById('dadoBase1').src = "face6.png";
+        document.getElementById('dadoBase1').src = "images/face6.png";
             break;
         default:
             break;
@@ -31,22 +31,22 @@ function mudar(){
         switch (numero){
         
             case 1: 
-            document.getElementById('dadoBase2').src = "face1.png";
+            document.getElementById('dadoBase2').src = "images/face1.png";
                 break;
             case 2:  
-            document.getElementById('dadoBase2').src = "face2.png";
+            document.getElementById('dadoBase2').src = "images/face2.png";
                 break;
             case 3:  
-            document.getElementById('dadoBase2').src = "face3.png";
+            document.getElementById('dadoBase2').src = "images/face3.png";
                 break;
             case 4:  
-            document.getElementById('dadoBase2').src = "face4.png";
+            document.getElementById('dadoBase2').src = "images/face4.png";
                 break;
             case 5:  
-            document.getElementById('dadoBase2').src = "face5.png";
+            document.getElementById('dadoBase2').src = "images/face5.png";
                 break;
             case 6:  
-            document.getElementById('dadoBase2').src = "face6.png";
+            document.getElementById('dadoBase2').src = "images/face6.png";
                 break;
             default:
                 break;
@@ -62,10 +62,9 @@ function mudar(){
     }
 
 
-    function nickjogador(){
-        var nome = document.getElementById('nomeId').value;
+    function save(){
+
         var nick = document.getElementById('nickId').value;
-        var idade = document.getElementById('idadeId').value;
         if(document.getElementById('jogador1Id').checked == true){
 
             document.getElementById('player1').value = nick;
@@ -80,3 +79,6 @@ function mudar(){
             alert('Por favor selecione Jogador 1 ou Jogador 2');
         }
     }
+
+       /* Aciona o botão LET'S GO para jogar */
+
