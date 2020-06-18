@@ -3,69 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo de Dados</title>
-    <style>
-        body {
-            font-family: Arial;
-        }
-
-       body img {
-
-            width: 200px;
-            height: 200px;
-        }
-    </style>
+    <title>Cadastro Jogador</title>
 </head>
-<body onload="reiniciarJogo()">
+
+<body onload="refresh()">
 
     <div id="wrapper">
 
         <!-- Seletor de Jogador 1 ou Jogador 2 -->
         <form class="game">
+
             <p>Cadastro</p>
-            <input type="radio" name="player" id="jogador1Id" required> <label>Jogador 1</label>
-            <input type="radio" name="player" id="jogador2Id" required><label>Jogador 2</label>
+            <input type="radio" name="player" id="jogador1Id" value="jogador1"><label>Jogador 1</label>
+            <input type="radio" name="player" id="jogador2Id" value="jogador2"><label>Jogador 2</label>
+
         </form>
         <br />
 
+
         <!-- Preenchimento de Nome, Nick e Idade -->
-        <form name="form1" id="form1" method="post" action="#">
+        <form name="form1" id="form1" method="post" action="jogo.html">
 
            <label> Nome: </label>
-           <input type="text" name="nome" id="nomeId" placeholder="Digite seu nome" required>
+           <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
             <br /><br />
 
             <label> Nick: </label>
-            <input type="text" name="nick" id="nickId" value="" placeholder="Digite seu nick" required>
+            <input type="text" name="nick" id="nick" value="" placeholder="Digite seu nick" required>
             <br /><br />
 
             <label> Idade: </label>
-            <input type="number" name="idade" id="idadeId" placeholder="Digite sua idade" required>
+            <input type="number" name="idade" id="idade" placeholder="Digite sua idade" required>
+
+
+
             <button type="submit" id="form1-submit" onclick="save()">Ok</button>
 
         </form>
 
-
-    <div  id="dados">
-        
-        <div class="jogo">
-            <p>Jogo de dados</p>
-
-            <p id="total">Total:</p>
-            <br />
-
-            <img src="images/face00.png" id="dadoBase1">
-            <input type="button" id="player1" value="Jogador 1">
-            <button onclick="mudar()">LET'S GO</button>
-            <button type="reset" onclick="refresh()">Reiniciar o Jogo</button>
-            <img src="images/face00.png" id="dadoBase2">
-            <input type="button" id="player2" value="Jogador 2">
-            
-        </div>
     </div>
-</div>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript" src="dado.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="infojogador.js"></script>
 </body>
 </html>

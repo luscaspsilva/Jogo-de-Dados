@@ -1,9 +1,11 @@
 /* Mecanismo para rolar os dados */
+var numero1 = 0, numero2 = 0;
+var score1 = 10, score2 = 10;
 
-function mudar(){
+function mudar1(){
 
-    var numero = Math.floor(Math.random() * 6 + 1);
-    switch (numero){
+    numero1 = Math.floor(Math.random() * 6 + 1);   
+    switch (numero1){
     
         case 1: 
         document.getElementById('dadoBase1').src = "images/face1.png";
@@ -26,9 +28,12 @@ function mudar(){
         default:
             break;
         }
+    }
 
-        var numero = Math.floor(Math.random() * 6 + 1);
-        switch (numero){
+    function mudar2(){
+
+        numero2 = Math.floor(Math.random() * 6 + 1);
+        switch (numero2){
         
             case 1: 
             document.getElementById('dadoBase2').src = "images/face1.png";
@@ -53,32 +58,21 @@ function mudar(){
             }
         
     }
-/* Ativa o botão reiniciar o jogo */
-
-    function refresh(){
-
-        document.getElementById('dadoBase1').src = "face00.png";
-        document.getElementById('dadoBase2').src = "face00.png";
-    }
 
 
-    function save(){
-
-        var nick = document.getElementById('nickId').value;
-        if(document.getElementById('jogador1Id').checked == true){
-
-            document.getElementById('player1').value = nick;
-
+    function totalResultado(){
+        if(numero1 > numero2){ // Se o resultado for maior que o do outro jogador
+            score1++,score2--; // o valor vai ser adicionado +1 e o outro jogador vai ser -1
+        }else if(numero1 < numero2){ // mesma coisa da de cima mas com outro sinal.
+            score2++,score1--;
         }
+}
 
-        else if (document.getElementById('jogador2Id').checked == true){
-            document.getElementById('player2').value = nick;
-        }
+    $('#total1').html('score:'+score1+'');
+    $('#total2').html('score:'+score2+'');
 
-        else {
-            alert('Por favor selecione Jogador 1 ou Jogador 2');
-        }
-    }
+    $('#Jogador1').html(getJogador1()+' ');
+    $('#Jogador2').html(getJogador2()+' ');
 
-       /* Aciona o botão LET'S GO para jogar */
+    
 
