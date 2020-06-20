@@ -23,7 +23,7 @@ body {
     background-color: rgb(220, 220, 220);
     width: 290px;
     height: 219px;
-    margin: 280px auto 200px auto;
+    margin: 280px auto 280px auto;
     border-radius: 20px;
 }
 
@@ -43,9 +43,14 @@ body {
     border-radius: 6px;
 }
 
-#game input, label{
+#game input {
     
-    margin-left: 20px
+    margin-left: 20px;
+}
+
+#game label{
+    
+    margin-left: 5px;
 }
 
 #nick {
@@ -58,14 +63,16 @@ body {
 #form1 {
     
     margin-top: 2px;
+    margin-left: 20px;
     
 }
 
 /* Botão */
 
 .okButton {
-    margin-left: 230px;
-    margin-top: 20px;
+    position: absolute;
+    margin-left: 210px;
+    margin-top: 15px;
     width: 50px;
 }
 

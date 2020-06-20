@@ -1,6 +1,6 @@
 /* Mecanismo para rolar os dados */
 var numero1 = 0, numero2 = 0;
-var score1 = 10, score2 = 10;
+var score1 = 0, score2 = 0;
 
 function mudar(){
 
@@ -59,13 +59,20 @@ function mudar(){
 
 function totalResultado(){
     if(numero1 > numero2){
-        score1--;
-    
+        score1++;
+        $('#ganhador').html(getJogador1()+' ganhou!');
     }
     else if (numero1 < numero2) {
-        score2--;
-       
+        score2++;
+        $('#ganhador').html(getJogador2()+' ganhou!');
     }
+        else {
+            $('#ganhador').html('EMPATE!');
+        }
+    
+
+    
+    
 
     $('#total1').html('score: '+score1+' ');
     $('#total2').html('score: '+score2+' ');
