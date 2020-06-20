@@ -4,27 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo de Dados</title>
-    <style>
-        body {
-            font-family: Arial;
-        }
-
-       body img {
-
-            width: 200px;
-            height: 200px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/jogo.css">
 </head>
 <body onload="podeJogar()">
+    <div id="wrapper">
 
         <p>Jogo de dados</p>
-        
-        <div id='total1'></div>
-        <div id='total2'></div>
-        <form>
 
+        
+        
+        
+        <form id="imgDado">
+            
+        <div id='total1'></div>
         <img src="images/face00.png" id="dadoBase1">
+            
+        <div id='total2'></div>    
         <img src="images/face00.png" id="dadoBase2">
 
         </form>
@@ -32,35 +27,37 @@
 
         <form>
 
-            <div id="Jogador1"></div>
+            <div id="Jogador1">aa</div>
 
-            <div id="Jogador2"></div>
+            <div id="Jogador2">aa</div>
 
         </form>
 
-
+    <div id="buttons">
     <form method="post" action="#">
 
-            <input type="button" onclick="mudar1();mudar2();totalResultado()" value="LET'S GO">
+            <input type="button" id="jClick" onclick="mudar();totalResultado()" value="LET'S GO">
 
     </form>
     
             
     <form method="post" action="jogo.html"> 
 
-        <input type="submit" value="Reiniciar o Jogo">
+        <input type="submit" id="jReiniciar" value="Reiniciar o Jogo">
 
     </form>
 
     <form method="post" action="index.html">
 
-        <input class="cadastro" type="submit" value="Casdatrar Jogadores">
+        <input class="cadastro" id="jCadastro" type="submit" value="Casdatrar Jogadores">
 
     </form>
-</div>
+    </div>
+</div>        
+
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript" src="infojogador.js"></script>
-    <script type="text/javascript" src="dado.js"></script>
+    <script type="text/javascript" src="js/infojogador.js"></script>
+    <script type="text/javascript" src="js/dado.js"></script>
 </body>
 </html>

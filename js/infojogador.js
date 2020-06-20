@@ -12,7 +12,7 @@ function radioJogador2(){
     return ($('input[value=jogador2]:checked').val() == 'jogador2');
 }
 
-function save(){
+function cadastrar(){
     if(!radioJogador1() && !radioJogador2()){
         alert('Selecione o jogador 1 ou 2!');
         return;

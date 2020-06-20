@@ -2,9 +2,10 @@
 var numero1 = 0, numero2 = 0;
 var score1 = 10, score2 = 10;
 
-function mudar1(){
+function mudar(){
 
-    numero1 = Math.floor(Math.random() * 6 + 1);   
+    numero1 = Math.floor(Math.random() * 6 + 1);
+    numero2 = Math.floor(Math.random() * 6 + 1);
     switch (numero1){
     
         case 1: 
@@ -28,11 +29,8 @@ function mudar1(){
         default:
             break;
         }
-    }
 
-    function mudar2(){
-
-        numero2 = Math.floor(Math.random() * 6 + 1);
+         
         switch (numero2){
         
             case 1: 
@@ -59,20 +57,23 @@ function mudar1(){
         
     }
 
+function totalResultado(){
+    if(numero1 > numero2){
+        score1--;
+    
+    }
+    else if (numero1 < numero2) {
+        score2--;
+       
+    }
 
-    function totalResultado(){
-        if(numero1 > numero2){ // Se o resultado for maior que o do outro jogador
-            score1++,score2--; // o valor vai ser adicionado +1 e o outro jogador vai ser -1
-        }else if(numero1 < numero2){ // mesma coisa da de cima mas com outro sinal.
-            score2++,score1--;
-        }
-}
-
-    $('#total1').html('score:'+score1+'');
-    $('#total2').html('score:'+score2+'');
+    $('#total1').html('score: '+score1+' ');
+    $('#total2').html('score: '+score2+' ');
 
     $('#Jogador1').html(getJogador1()+' ');
     $('#Jogador2').html(getJogador2()+' ');
+}
+
 
     
 
