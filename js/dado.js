@@ -66,13 +66,9 @@ function totalResultado(){
         score2++;
         $('#ganhador').html(getJogador2()+' ganhou!');
     }
-        else {
+        else{
             $('#ganhador').html('EMPATE!');
         }
-    
-
-    
-    
 
     $('#total1').html('score: '+score1+' ');
     $('#total2').html('score: '+score2+' ');
@@ -81,6 +77,17 @@ function totalResultado(){
     $('#Jogador2').html(getJogador2()+' ');
 }
 
+function grandeVencedor(){
+    if(score1 == 10){
+        alert(getJogador1()+' PARABÉNS você ganhou!!!');
+        gohome();
+
+    }
+    else if (score2 == 10){
+        alert(getJogador2()+' PARABÉNS você ganhou!!!');
+        gohome();
+    }
+}
 
     
 

@@ -1,5 +1,5 @@
-function gohome(){
-    window.location="index.html"
+ function gohome(){
+    window.location="jogo.html"
 }
 
 /* Verifica se a opção jogador 1 e 2 foram selecionadas */
